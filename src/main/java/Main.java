@@ -9,13 +9,6 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
- /*   public static void main(String[] args) throws Exception {
-        ConverterUtils.DataSource source = new ConverterUtils.DataSource("C:\\Users\\Pudliszka\\Desktop\\xxd\\Dry_Bean_Dataset.arff");
-        Instances data = source.getDataSet();
-        data.forEach(instance -> {
-            System.out.println(instance.getClass());
-        });
-    }*/
 
     public static void main(String[] args) throws Exception {
         ManhattanDistance manDistance = new ManhattanDistance();
@@ -68,9 +61,7 @@ public class Main {
                         classifier.setNumDecimalPlaces(2);
                         classifier.setWindowSize(0);
 
-
                         System.out.println("START K = " + k + " for " + fileName);
-                        //Detailed Accuracy By Class
                         classifier.buildClassifier(data);
                         Evaluation eval = new Evaluation(data);
                         var startDate = new Date();
